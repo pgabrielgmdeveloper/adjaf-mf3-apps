@@ -24,7 +24,7 @@ def list_musics(request):
     return render(request, 'musics/list_musics.html', context={"musics": musics})
 
 def add_musics(request):
-
+    
     method = request.method
     if method == "POST":
         name = request.POST.get("name")
@@ -41,7 +41,7 @@ def add_musics(request):
             'file': (music.name, music, music.content_type),
             'music_json': (None, json.dumps(music_json), 'application/json')
         }
-        response = requests.post(F"{settings.MUSIC_API_HOST}music/create-music", files=files)
+        response = requests.post(F"{settings.MUSIC_API_HOST}/music/create-music", files=files)
         messages.add_message(request, constants.SUCCESS, "Musica adicionada com sucesso") if response.ok else messages.add_message(request, constants.ERROR, "Não foi possivel adicionar a musica. tente novamente mais tarde")
         return redirect("/musics/list_musics")
 
