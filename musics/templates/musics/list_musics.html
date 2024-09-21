@@ -1,0 +1,49 @@
+
+{% extends 'global/base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'music/css/style.css' %}"/>
+{% endblock %}
+
+{% block title %}
+    Musics | listar musicas
+{% endblock %}
+
+{% block body %}
+<main>
+    {% for message in messages%}
+        <div class="alert {{message.tags}}" role="alert">
+            {{message}}
+        </div>
+    {% endfor %}
+    <form action="">
+        <input class="input-search" type="text">
+        <button type="submit" style="border: none;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+    <ul class="list-group list-group-light">
+        {% for music in musics %}
+        <a href="" style="text-decoration: none;">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <div class="" style="background: #faf6ff; width: fit-content; padding: 5px; border-radius: 50%;">
+                    <i class="fa-solid fa-music"></i>
+                  </div>
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{music.singer}}</p>
+                  <p>{{music.name}}</p>
+                </div>
+              </div>
+            </li>
+        </a>
+        {% endfor %}
+      </ul>
+      <div class="add-music-button" style="display: flex; justify-content: center;">
+        <a class="btn btn-primary btn-lg" style="text-align: center; border-radius: 50%;" href="{% url 'add_music' %}">+</a>
+        <a href="{% url 'music_home' %}"> voltar</a>
+    </div>
+</main>
+
+{% endblock %}
+

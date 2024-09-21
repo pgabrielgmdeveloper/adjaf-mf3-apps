@@ -1,0 +1,105 @@
+{% extends 'global/base.html' %}
+
+{% block title %}
+    Musics | home
+{% endblock %}
+
+{% block body %}
+<div class="py-lg-14 bg-light pt-8 pb-10">
+    <!-- container -->
+
+    <div class="container">
+      <div class="row">
+        <!-- col -->
+
+        <div class="col-md-12 col-12">
+
+          <div class="row text-center">
+            <div class="col-md-12 px-lg-10 mb-8 mt-6">
+              <!-- heading -->
+
+              <h2 class="h1 fw-bold mt-3">Musics
+              </h2>
+              <!-- text -->
+            </div>
+          </div>
+          <div class="row gy-4">
+            
+            <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+              <!-- card -->
+
+              <div class="card  border-top border-muted border-4  card-hover-with-icon">
+                <!-- card body -->
+                <a href="{% url 'list_musics' %}" style="text-decoration: none; color: black;">
+                <div class="card-body">
+                  <!-- icon -->
+                        
+                  <div class="" style="background: #faf6ff; width: fit-content; padding: 5px; border-radius: 50%;">
+                    <i class="fa-solid fa-music"></i>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                      <!-- heading -->
+
+                      <h4 class="mb-0">Musicas</h4>
+                      <!-- text -->
+
+                      <p class="mb-0 text-muted">Listar é ver todas as musicas</p>
+                    </div>
+                    <!-- icon -->
+
+                    <a href="{% url 'list_musics' %}" class="text-inherit">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                <!-- card -->
+                <div class="card  border-top border-muted border-4  card-hover-with-icon">
+                  <!-- card body -->
+                  <a href="{% url 'cult_home' %}" style="text-decoration: none; color: black;">
+  
+                  
+                  <div class="card-body">
+                    <!-- icon -->
+                          
+                    <div class="" style="background: #faf6ff; width: fit-content; padding: 5px; border-radius: 50%;">
+                        <i class="fa-solid fa-cross"></i>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <!-- heading -->
+
+                        <h4 class="mb-0">Cultos</h4>
+                        <!-- text -->
+  
+                        <p class="mb-0 text-muted">Ver todos os cultos disponiveis</p>
+                      </div>
+                      <!-- icon -->
+  
+                      <a href="{% url 'cult_home' %}" class="text-inherit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+  
+              </div>
+
+            <!-- button -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

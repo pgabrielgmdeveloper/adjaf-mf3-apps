@@ -1,0 +1,45 @@
+main{
+    padding: 0 50px;
+}
+form {
+    margin-top: 5px;
+    border: 1px solid #d8d8d8;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+form > button {
+    background-color: #eee;
+    border-radius:0 20px 20px 0;
+
+}
+
+form:focus-within {
+    background: black;
+}
+.input-search {
+    background-color:#eee;
+    border-radius:20px 0 0 20px;
+
+    border: none;
+    outline: none;
+    width: 100%;
+    color: rgb(41, 41, 41);
+    padding: 5px;
+}
+ul {
+    height: 80vh;
+    overflow-y: auto;
+}
+.add-music-button {
+
+    position: absolute;
+    bottom: 0;
+    bottom: 0; /* Alinha o elemento na parte inferior do pai */
+    left: 50%; /* Move o ponto de referência para o meio do pai */
+    transform: translateX(-50%);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+
+}

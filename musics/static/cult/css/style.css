@@ -1,0 +1,12 @@
+.add-music-button {
+
+    position: absolute;
+    bottom: 0;
+    bottom: 0; /* Alinha o elemento na parte inferior do pai */
+    left: 50%; /* Move o ponto de referência para o meio do pai */
+    transform: translateX(-50%);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+
+}

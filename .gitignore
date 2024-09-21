@@ -1,0 +1,5 @@
+**/**/__pycache__
+setenv.sh
+.vscode/launch.json
+
+db.sqlite3
